@@ -1,5 +1,6 @@
 ## Comparing the Performance of Different Deep Learning Models on the GTZAN Dataset
-> Author: Tianhao Liu 
+> Author: Tianhao Liu
+ 
 > Email: liutianhao328@gmail.com | tianhao.liu@ucdconnect.ie
 
 ### Quick Start
