@@ -19,16 +19,20 @@ To easily add new models, I designed the training process to be a highly scalabl
 
 
 ### Models and Training:
-**Models:**
-* MLP                   ✅
-* CNN                   ✅
-* LSTM                  ✅
-* GRU                   ✅
 
-**Training:**
-* Early Stop            ✅
-* Batch training        ✅
-* check point           ✅
-* Log (loss)            ✅
-* train-test-split      ✅ 
-* Evaluation            ✅
+| Model | Status |
+|-------|--------|
+| MLP   |   ✅   |
+| CNN   |   ✅   |
+| LSTM  |   ✅   |
+| GRU   |   ✅   |
+
+
+| Feature               | Status |
+|-----------------------|--------|
+| Early Stop            |   ✅   |
+| Batch training        |   ✅   |
+| Checkpoint            |   ✅   |
+| Log (loss)            |   ✅   |
+| Train-test-split      |   ✅   |
+| Evaluation            |   ✅   |
