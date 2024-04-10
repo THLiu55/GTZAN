@@ -16,3 +16,19 @@ To easily add new models, I designed the training process to be a highly scalabl
 2. Create the instance of your model in `models/model_manager.py`
 3. Add the model parameters in `hparams.yaml`
 4. Run your model on GTZAN dataset `python train.py <your model name specified in hparams.yaml>`
+
+
+### Models and Training:
+**Models:**
+* MLP                   ✅
+* CNN                   ✅
+* LSTM                  ✅
+* GRU                   ✅
+
+**Training:**
+* Early Stop            ✅
+* Batch training        ✅
+* check point           ✅
+* Log (loss)            ✅
+* train-test-split      ✅ 
+* Evaluation            ✅
