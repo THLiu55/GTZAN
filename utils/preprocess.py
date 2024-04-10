@@ -1,7 +1,6 @@
 import json
 import os
 import math
-import librosa
 from typing import Optional
 from utils.params import Params
 from tqdm import tqdm
@@ -9,6 +8,7 @@ import numpy as np
 
 
 def load_audio(params: Params):
+    import librosa
     data = {
         'mapping': [],
         'labels': [],
