@@ -4,7 +4,7 @@ class LSTM(nn.Module):
     def __init__(self, input_shape, hidden_size, num_classes):
         super(LSTM, self).__init__()
         
-        self.lstm1 = nn.LSTM(input_size=input_shape[-1], hidden_size=hidden_size, 
+        self.lstm = nn.LSTM(input_size=input_shape[-1], hidden_size=hidden_size, 
                              num_layers=2, batch_first=True, bidirectional=False)
         
         self.fc1 = nn.Linear(hidden_size, 64)

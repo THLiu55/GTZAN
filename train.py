@@ -1,12 +1,9 @@
-import os
-import time
 import json
 import argparse
 from utils.params import Params
 from utils.preprocess import load_audio, prepare_data
 from sklearn.model_selection import train_test_split
 import torch.optim as optim
-from models.CNN import CNN
 import torch.nn as nn
 import torch
 from tqdm import tqdm
