@@ -7,7 +7,6 @@ from utils.preprocess import load_audio, prepare_data
 from sklearn.model_selection import train_test_split
 import torch.optim as optim
 from models.CNN import CNN
-from models.MLP import MLP
 import torch.nn as nn
 import torch
 from tqdm import tqdm
