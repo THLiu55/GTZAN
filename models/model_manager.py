@@ -8,6 +8,9 @@ def getModel(params, input_shape, num_classes):
     elif params.model_name == 'LSTM':
         from models.LSTM import LSTM
         model = LSTM(input_shape=input_shape, hidden_size=params.hidden_size, num_classes=num_classes)
+    elif params.model_name == 'GRU':
+        from models.GRU import GRU
+        model = GRU(input_shape=input_shape, hidden_size=params.hidden_size, num_classes=num_classes)
     else:
         raise ValueError(f"Model {params.model} not supported")
     return model

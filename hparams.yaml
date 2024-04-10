@@ -46,3 +46,15 @@ LSTM:
   lr: 0.0001
   patience: 20
   hidden_size: 64
+
+
+GRU:
+  <<: *DEFAULT
+  model_name: GRU
+  checkpoint_path: "checkpoints/gru.pth"
+  log_path: 'logs/gru.json'
+  num_epochs: 500
+  batch_size: 32
+  lr: 0.0001
+  patience: 10
+  hidden_size: 64
