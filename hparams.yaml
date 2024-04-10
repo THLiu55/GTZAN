@@ -16,29 +16,33 @@ preprocess:
   ignored_audio: "data/genres_original/jazz/jazz.00054.wav"
 
 
-
 MLP:
   <<: *DEFAULT
-  model_name: mlp
-  data_dir: "fashionmnist" # https://www.kaggle.com/zalando-research/fashionmnist
-  checkpoint_dir: "checkpoints/mlp"
-  log_dir: 'logs/mlp'
-  dataset_class: "FashionMNISTDataset"
-  flatten: True
-  gpu_vis_dev: '0'
-  num_epochs: 10
-  batch_size: 256
+  model_name: MLP
+  checkpoint_path: "checkpoints/mlp.pth"
+  log_path: 'logs/mlp.json'
+  num_epochs: 500
+  batch_size: 32
   lr: 0.0001
+  patience: 20
 
 CNN:
   <<: *DEFAULT
-  model_name: cnn
-  data_dir: "fashionmnist"
-  checkpoint_dir: "checkpoints/cnn"
-  log_dir: 'logs/cnn'
-  dataset_class: "FashionMNISTDataset"
-  flatten: False
-  gpu_vis_dev: '0'
-  num_epochs: 10
-  batch_size: 256
+  model_name: CNN
+  checkpoint_path: "checkpoints/cnn.pth"
+  log_path: 'logs/cnn.json'
+  num_epochs: 100
+  batch_size: 32
   lr: 0.0001
+  patience: 10
+
+LSTM:
+  <<: *DEFAULT
+  model_name: LSTM
+  checkpoint_path: "checkpoints/lstm.pth"
+  log_path: 'logs/lstm.json'
+  num_epochs: 500
+  batch_size: 32
+  lr: 0.0001
+  patience: 20
+  hidden_size: 64

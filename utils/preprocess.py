@@ -8,7 +8,7 @@ from tqdm import tqdm
 import numpy as np
 
 
-def load_audio(params: Params) -> Optional[tuple]:
+def load_audio(params: Params):
     data = {
         'mapping': [],
         'labels': [],
@@ -45,10 +45,12 @@ def load_audio(params: Params) -> Optional[tuple]:
 
 
 
-def load_data(params: Params):
+def prepare_data(params: Params):
     print('Loading data from', params.audio_processed_path)
     with open(params.audio_processed_path, 'r') as fp:
         data = json.load(fp)
         inputs = np.array(data["mfcc"]) 
         targets = np.array(data["labels"])
+    if params.model_name == "CNN":
+        inputs = np.expand_dims(inputs, axis=1)
     return inputs, targets
