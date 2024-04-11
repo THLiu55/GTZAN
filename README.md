@@ -1,8 +1,12 @@
-## Comparing the Performance of Different Deep Learning Models on the GTZAN Dataset
+# Comparing the Performance of Different Deep Learning Models on the GTZAN Dataset
 > Author: Tianhao Liu
  
 > Email: liutianhao328@gmail.com | tianhao.liu@ucdconnect.ie
 
+**In this project, I tried two approachs to classify the genres of songs. One is to build deeplearning model from scratch, using CNN, MLP, LSTM, and GRU. Beside this, I also tried to fine tune exsiting pre-trained models to handel my task.**
+
+
+## From Scratch
 ### Quick Start
 1. Download the GTZAN dataset to this project folder
 2. Unzip the downloaded database, the name of the downloaded database should be `Data`
@@ -11,15 +15,6 @@
 5.  After training, a trained model will be saved in folder `checkpoints`, and its loss record will be saved in folder   `logs`. 
 
 
-### Add your own model
-To easily add new models, I designed the training process to be a highly scalable. All you need to do is:
-1. Add your own model in folder `models`
-2. Create the instance of your model in `models/model_manager.py`
-3. Add the model parameters in `hparams.yaml`
-4. Run your model on GTZAN dataset `python train.py <your model name specified in hparams.yaml>`
-
-
-### Models and Training:
 
 | Model | Status |
 |-------|--------|
@@ -37,3 +32,8 @@ To easily add new models, I designed the training process to be a highly scalabl
 | Log (loss)            |   ✅   |
 | Train-test-split      |   ✅   |
 | Evaluation            |   ✅   |
+
+
+## Fine Tune
+1. install all the packages declared in `requirements.txt`
+2. I have fine tuned 3 pre-trained models, that are: `resnext`, `vgg19`, and `squeezenet`. You can find them in `finetune-resnext.ipynb`, `finetune-vgg.ipynb`, and `finetune-squeezenet.ipynb` respectively. 
