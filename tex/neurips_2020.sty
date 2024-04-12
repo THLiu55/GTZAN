@@ -53,13 +53,13 @@
 \renewcommand{\sfdefault}{phv}
 
 % change this every year for notice string at bottom
-\newcommand{\@neuripsordinal}{34th}
-\newcommand{\@neuripsyear}{2020}
-\newcommand{\@neuripslocation}{Vancouver, Canada}
+\newcommand{\@neuripsordinal}{COMP47650 -}
+\newcommand{\@neuripsyear}{2024}
+\newcommand{\@neuripslocation}{Dublin, Ireland}
 
 % acknowledgments
 \usepackage{environ}
-\newcommand{\acksection}{\section*{Acknowledgments and Disclosure of Funding}}
+\newcommand{\acksection}{\section*{COMP47650 Deep Learning}}
 \NewEnviron{ack}{%
   \acksection
   \BODY
@@ -73,13 +73,11 @@
 \else
   \if@neuripsfinal
     \newcommand{\@noticestring}{%
-      \@neuripsordinal\/ Conference on Neural Information Processing Systems
-      (NeurIPS \@neuripsyear), \@neuripslocation.%
+      \@neuripsordinal\/ Deep Learning Final Project Report, \@neuripslocation.%
     }
   \else
     \newcommand{\@noticestring}{%
-      Submitted to \@neuripsordinal\/ Conference on Neural Information
-      Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
+      Submitted to \@neuripsordinal\/ Deep Learning Assignment Report. Do not distribute.%
     }
 
     % hide the acknowledgements
